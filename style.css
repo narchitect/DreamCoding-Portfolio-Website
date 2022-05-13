@@ -18,7 +18,7 @@
   --font-large: 40px;
   --font-medium: 24px;
   --font-regular: 18px;
-  --font-small: 16px;
+  --font-small: 20px;
   --font-micro: 14px;
 
   /* Font weight */
@@ -30,7 +30,7 @@
   --size-border-radius: 4px;
 
   /* Animation duration */
-  --animation-duration: all 300ms ease ;
+  --animation-duration: all 300ms ease;
 }
 
 
@@ -67,7 +67,7 @@ h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
-  margin: 16px 0px;
+  margin: 20px 0px;
 }
 
 h2 {
@@ -98,7 +98,7 @@ p {
   background-color: var(--color-pink);
   align-items: center;
   color: var(--color-white);
-  padding: 16px;
+  padding: 20px;
 }
 
 .navbar__menu {
@@ -180,7 +180,7 @@ p {
   line-height: 170px;
   font-size: 70px;
   margin: auto;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   color: var(--color-blue);
   border: 2px solid var(--color-blue);
   border-radius: 50%;
@@ -208,7 +208,7 @@ p {
 }
 
 .job__description {
-  margin: 16px;
+  margin: 20px;
   text-align: left;
 }
 
@@ -277,4 +277,60 @@ p {
 
 .tools, .etc {
   padding: 20px;
+}
+
+/* Work */
+
+.work__categories {
+  margin: 40px;
+}
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 40px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.project {
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+}
+
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
 }
