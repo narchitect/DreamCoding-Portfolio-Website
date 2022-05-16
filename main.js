@@ -1,6 +1,5 @@
 'use strict';
 
-
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -22,16 +21,27 @@ navbarMenu.addEventListener('click', (event) => {
     }
     
     scrollIntoView(link);
-})
+});
 
 //Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
 
-})
+});
+
+//Make home slowly fad to transparent as the window scrools down
+
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    console.log(homeHeight);
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: 'smooth'});
 }
+
